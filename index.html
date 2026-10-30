@@ -17,11 +17,11 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
 
-    <!-- Google Fonts & Icons -->
+    <!-- Google Fonts: Outfit (headings) & Plus Jakarta Sans (body/UI) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -39,8 +39,8 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- HEADER / NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNavbar">
+    <!-- MAIN NAVBAR (Light Sky Theme, Clean Glass Shadow) -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
       <div class="container">
         <a
           class="navbar-brand d-flex align-items-center"
@@ -66,35 +66,30 @@
         </button>
 
         <div class="collapse navbar-collapse" id="nav">
-          <!-- Exact requested menu items: Home, 3D Studio, About, Service, Products, Contact, Get Quote -->
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#bottle-customizer"
-                style="color: var(--aqua) !important; font-weight: 600"
-              >
-                <i class="bi bi-badge-3d-fill me-1"></i> 3D Studio
-              </a>
+              <a class="nav-link active" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
+              <a class="nav-link" href="#service">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#products">Products</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link nav-link-3d" href="#bottle-customizer">
+                <i class="bi bi-badge-3d-fill me-1"></i> 3D Studio
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-brass" href="#get-quote">
-                <i class="bi bi-chat-quote-fill"></i> Get Quote
+              <a class="btn btn-sky-primary" href="#get-quote">
+                <i class="bi bi-file-earmark-text-fill"></i> Get Free Quote
               </a>
             </li>
           </ul>
@@ -120,10 +115,10 @@
               and fine dining across Singapore &amp; Malaysia.
             </p>
             <div class="rise d-flex flex-wrap gap-3 mt-4">
-              <a href="#get-quote" class="btn btn-brass">
+              <a href="#get-quote" class="btn btn-sky-primary">
                 <i class="bi bi-file-earmark-text-fill"></i> Get a Free Quote
               </a>
-              <a href="#service" class="btn btn-ghost">
+              <a href="#service" class="btn btn-sky-outline">
                 <i class="bi bi-grid-fill me-1"></i> Explore All Events
               </a>
             </div>
@@ -406,7 +401,7 @@
             </div>
 
             <div class="d-flex flex-wrap gap-3">
-              <a href="#get-quote" class="btn btn-brass">
+              <a href="#get-quote" class="btn btn-sky-primary">
                 <i class="bi bi-check2-circle"></i> Request Quotation For This
                 Bottle
               </a>
@@ -414,7 +409,7 @@
                 href="https://wa.me/6593850165?text=Hi%20ALLTOS,%20I%20customized%20a%20bottle%20in%20your%203D%20Studio%20and%20would%20like%20a%20quote."
                 target="_blank"
                 rel="noopener"
-                class="btn btn-ghost"
+                class="btn btn-sky-outline"
               >
                 <i class="bi bi-whatsapp"></i> Chat On WhatsApp
               </a>
@@ -637,7 +632,9 @@
               </div>
             </div>
 
-            <div class="card mt-4 p-4 border-0 shadow-sm rounded-4 bg-white">
+            <div
+              class="card mt-4 p-4 border border-light-subtle shadow-sm rounded-3 bg-white"
+            >
               <h5 class="mb-3 text-dark fw-bold">
                 <i class="bi bi-trophy-fill text-warning me-2"></i>Our
                 Milestones
@@ -851,12 +848,13 @@
     <section id="products" class="dark-section">
       <div class="container">
         <div class="text-center max-w-700 mx-auto mb-5 rv">
-          <span class="sec-subtitle text-warning">Pure Hydration</span>
-          <h2 class="text-white">Our Premium Water Selections</h2>
-          <p
-            class="text-light opacity-75 mt-2"
-            style="max-width: 650px; margin: 0 auto"
+          <span
+            class="sec-subtitle"
+            style="color: var(--sky-dark); font-weight: 700"
+            >Pure Hydration</span
           >
+          <h2 style="color: var(--ink)">Our Premium Water Selections</h2>
+          <p class="text-muted mt-2" style="max-width: 650px; margin: 0 auto">
             Certified, lab-tested, and bottled under strict hygiene standards to
             guarantee supreme taste and optimal freshness.
           </p>
@@ -966,7 +964,7 @@
               four-step pipeline ensures precision printing, seamless bottling,
               and punctual delivery.
             </p>
-            <a href="#get-quote" class="btn btn-brass mt-2">
+            <a href="#get-quote" class="btn btn-sky-primary mt-2">
               <i class="bi bi-arrow-right-circle-fill"></i> Start Your Order
               Today
             </a>
@@ -1023,32 +1021,32 @@
       </div>
     </section>
 
-    <!-- CONTACT & ADVANCED MODERN GET QUOTE SECTION -->
+    <!-- CONTACT & ADVANCED MODERN GET QUOTE SECTION (Clean Sky Theme) -->
     <section
       id="contact"
-      class="dark-section"
       style="
-        background: radial-gradient(
-          circle at 10% 20%,
-          #082d52 0%,
-          var(--deep) 90%
-        );
+        background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+        border-top: 1px solid #e0f2fe;
       "
     >
       <div class="container">
         <div class="row g-5 align-items-center" id="get-quote">
           <div class="col-lg-5 rv">
-            <span class="sec-subtitle text-warning">Connect With Us</span>
-            <h2 class="text-white mb-3">
-              Talk to Seshan,<br /><span style="color: var(--aqua)"
+            <span
+              class="sec-subtitle"
+              style="color: var(--sky-dark); font-weight: 700"
+              >Direct Inquiry</span
+            >
+            <h2 class="mb-3" style="color: var(--ink)">
+              Talk to Seshan,<br /><span style="color: var(--sky-dark)"
                 >Water Ambassador</span
               >
             </h2>
-            <p class="text-light opacity-80 mb-4 leading-relaxed">
+            <p class="text-muted mb-4 leading-relaxed">
               Our promise to you is simple:
               <strong>&ldquo;ALL IS WELL&rdquo;</strong> &mdash; delivering
               reliability, premium bottling, and dedicated customer support for
-              your brand.
+              your brand across Singapore and Malaysia.
             </p>
 
             <div class="contact-info-card">
@@ -1057,13 +1055,11 @@
                   <i class="bi bi-telephone-fill"></i>
                 </div>
                 <div>
-                  <small class="text-white-50 d-block"
-                    >Phone / Direct Call</small
-                  >
+                  <small class="text-muted d-block">Phone / Direct Call</small>
                   <a
                     href="tel:+6593850165"
-                    class="text-white text-decoration-none fw-bold fs-5"
-                    >9385 0165</a
+                    class="text-dark text-decoration-none fw-bold fs-5"
+                    >+65 9385 0165</a
                   >
                 </div>
               </div>
@@ -1073,10 +1069,10 @@
                   <i class="bi bi-envelope-at-fill"></i>
                 </div>
                 <div>
-                  <small class="text-white-50 d-block">Email Inquiries</small>
+                  <small class="text-muted d-block">Email Inquiries</small>
                   <a
                     href="mailto:alltosa03@gmail.com"
-                    class="text-white text-decoration-none fw-semibold"
+                    class="text-dark text-decoration-none fw-semibold"
                     >alltosa03@gmail.com</a
                   >
                 </div>
@@ -1087,8 +1083,8 @@
                   <i class="bi bi-geo-alt-fill"></i>
                 </div>
                 <div>
-                  <small class="text-white-50 d-block">Singapore Office</small>
-                  <span class="text-white"
+                  <small class="text-muted d-block">Singapore Office</small>
+                  <span class="text-dark fw-medium"
                     >322B, Changi Road, #01-01, Singapore 419797</span
                   >
                 </div>

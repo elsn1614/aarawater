@@ -133,27 +133,32 @@ document.addEventListener('DOMContentLoaded', function () {
     marqContainer.innerHTML = marqueeHtml + marqueeHtml;
   }
 
-  // 4. Scroll Reveal and Counter Animation with Intersection Observer
+  // 4. Elementor-Style Scroll Reveal: appearing 200ms after cards are in view
   const revealElements = document.querySelectorAll('.rv');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          obs.unobserve(entry.target);
+          // Delay trigger by 200ms as requested
+          setTimeout(() => {
+            entry.target.classList.add('in');
+            
+            // Animate stat counters if present
+            const counters = entry.target.querySelectorAll('.count');
+            counters.forEach(counter => {
+              const targetVal = parseInt(counter.getAttribute('data-to'), 10) || 0;
+              animateCount(counter, 0, targetVal, 1500);
+            });
+          }, 200);
 
-          // Animate stat counters if present
-          const counters = entry.target.querySelectorAll('.count');
-          counters.forEach(counter => {
-            const targetVal = parseInt(counter.getAttribute('data-to'), 10) || 0;
-            animateCount(counter, 0, targetVal, 1500);
-          });
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     revealElements.forEach((el, index) => {
-      el.style.transitionDelay = `${(index % 4) * 80}ms`;
+      // Clean Elementor column stagger
+      el.style.transitionDelay = `${(index % 3) * 60}ms`;
       observer.observe(el);
     });
   } else {
